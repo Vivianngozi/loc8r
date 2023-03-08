@@ -18,9 +18,8 @@ router.get('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsReadOn
 router.put('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsUpdateOne);
 router.delete('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsDeleteOne);
 
-// route for api
-// to get a single location
-app.get('/api/locations/:locationid', ctrlLocations.locationsReadOne);
+
+
 
 
 
