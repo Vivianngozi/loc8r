@@ -12,9 +12,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "mongoose": "^7.0.0",
+    "mongoose": "^3.8.20",
     "morgan": "~1.9.1",
     "readline": "0.0.x"
-
   }
 }
