@@ -9,7 +9,18 @@ module.exports.locationsListByDistance = function (req, res, next) {
 };
 
 module.exports.locationsCreate = function (req, res, next) {
-  sendJsonResponse(res, 200, { status: "success" });
+  Loc.create({
+    name: req.body.name,
+    address: req.body.address,
+    facilities: req.body.facilities,
+    coords: req.body.coords
+  }, (err, location)=>{
+    if (err){
+      sendJsonResponse(res, 400, { err });
+    }else{
+      sendJsonResponse(res, 200, { data: location });
+    }
+  })
 };
 
 module.exports.locationsReadOne = function (req, res) {
