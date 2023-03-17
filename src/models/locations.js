@@ -7,7 +7,8 @@ var reviewSchema = new mongoose.Schema({
     rating: {type: Number, required: true, min: 0, max: 5},
     reviewText: String,
     createdOn: {type: Date, "default": Date.now}
-});
+}
+);
 
 // subdocument schema
 var openingTimeSchema = new mongoose.Schema({
@@ -23,7 +24,7 @@ var locationSchema = new mongoose.Schema({
     address: String,
     rating: {type: Number, default: 0, min: 0, max: 5 },
     facilities: [String],
-    coords: {type: [Number], index: '2dsphere'},
+    coords: {type: [Number], index: '2dsphere', required: true},
     openingTimes: [openingTimeSchema],
     reviews: [reviewSchema]
 });

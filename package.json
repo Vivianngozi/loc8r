@@ -15,7 +15,8 @@
     "jade": "~1.11.0",
     "mongoose": "4.4",
     "morgan": "~1.9.1",
-    "readline": "0.0.x"
+    "readline": "0.0.x",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
